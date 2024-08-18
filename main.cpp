@@ -1,4 +1,5 @@
 #include "array_utils.h"
+#include "struct_utils.h"
 #include <iostream>
 
 using namespace std;
@@ -9,7 +10,7 @@ int main() {
 
     //struct example
     usingStruct();
-    
+    return 0;
 }
 
 void usingArray(){
@@ -22,9 +23,16 @@ void usingArray(){
         cout << "score" << i+1 << ":" << scores[i] << " " << endl;
     }
 
-    return 0; 
+     
 }
 
 void usingStruct(){
-    
+    const int SIZE = 2;
+    Student students[SIZE];
+
+    loadDataToStruct(students, SIZE, "struct_data.txt");
+
+    for (int i = 0; i < SIZE; ++i) {
+        cout << students[i].name << " " << students[i].age << " " << students[i].gpa << endl;
+    }
 }
