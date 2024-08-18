@@ -4,15 +4,6 @@
 
 using namespace std;
 
-int main() {
-    //array example
-    usingArray();
-
-    //struct example
-    usingStruct();
-    return 0;
-}
-
 void usingArray(){
     const int SIZE = 5;
     int scores[SIZE];
@@ -21,9 +12,7 @@ void usingArray(){
 
     for (int i = 0; i < SIZE; ++i) {
         cout << "score" << i+1 << ":" << scores[i] << " " << endl;
-    }
-
-     
+    }     
 }
 
 void usingStruct(){
@@ -35,4 +24,14 @@ void usingStruct(){
     for (int i = 0; i < SIZE; ++i) {
         cout << students[i].name << " " << students[i].age << " " << students[i].gpa << endl;
     }
+}
+
+
+int main() {
+    //array example
+    usingArray();
+
+    //struct example
+    usingStruct();
+    return 0;
 }
